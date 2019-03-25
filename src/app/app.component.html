@@ -1,0 +1,19 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+
+<ng-container *ngIf="units.length">  
+  <mat-nav-list *ngFor="let unit of units">
+    <mat-list-item>
+      <ngx-avatar matListAvatar [name]="unit.name" [src]="unit.photoUrl"
+                initialsSize="2" textSizeRatio="2" [size]="(dense ? 32 : 40)"></ngx-avatar>
+      <h3 matLine>{{unit.name}}</h3>      
+      <h3 matLine>{{unit.alias}}</h3>
+    </mat-list-item>
+  </mat-nav-list>
+
+  <button mat-button (click)="changePhoto()">Booom!</button>
+
+</ng-container>
